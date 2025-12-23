@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const healthRoute = require('./routes/health');
 const webhookRoute = require('./routes/webhooks');
 const ordersRoute = require('./routes/orders');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use('/api', healthRoute);
 app.use(webhookRoute);

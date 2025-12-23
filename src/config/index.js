@@ -9,7 +9,7 @@ requiredEnv.forEach((key) => {
 });
 
 module.exports = {
-  port: Number(process.env.PORT) || 3000,
+  port: Number(process.env.PORT) || 8000,
   webhookSecret: process.env.WEBHOOK_SECRET,
   databasePath: process.env.DATABASE_PATH,
 };
